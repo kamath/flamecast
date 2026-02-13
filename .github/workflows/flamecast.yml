@@ -31,7 +31,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.FLAMECAST_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{"workflowRunId": ${{ github.run_id }}}' \
-            "https://flamecast.dev/api/workflow-runs" || true
+            "https://api.flamecast.dev/api/workflow-runs" || true
       - uses: smithery-ai/flamecast@v1
         with:
           prompt: ${{ inputs.prompt }}
